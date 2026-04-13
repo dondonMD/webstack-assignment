@@ -1,0 +1,9 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#EFF6FF"/>
+  <rect x="164" y="210" width="872" height="176" rx="32" fill="white"/>
+  <text x="238" y="320" fill="#334155" font-size="108" font-family="Arial, sans-serif" font-weight="700">SEO</text>
+  <circle cx="894" cy="298" r="76" fill="#DBEAFE"/>
+  <path d="M930 334L986 390" stroke="#1D4ED8" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="884" cy="288" r="48" stroke="#1D4ED8" stroke-width="18"/>
+  <path d="M184 466H1016" stroke="#BFDBFE" stroke-width="28" stroke-linecap="round"/>
+</svg>
