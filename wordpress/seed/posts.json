@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Getting Started with Next.js",
+    "slug": "getting-started-with-next-js",
+    "excerpt": "A practical introduction to routing, layouts, and server rendering in a modern Next.js project.",
+    "image": "nextjs.svg",
+    "content": "<p>Next.js gives teams a structured way to ship production-ready React applications quickly. App Router, server components, and route-based loading states make it much easier to keep product pages fast without writing large amounts of custom infrastructure.</p><p>For this assignment, Next.js is used to reproduce the same homepage layout built in Elementor, while reading the exact same post data from WordPress. That means the CMS still owns content, featured images, slugs, dates, and author details, while the frontend focuses on presentation and performance.</p><h2>Why it fits this project</h2><ul><li>It supports file-based routing for the homepage and single-post pages.</li><li>It works cleanly with server-side GraphQL fetching.</li><li>It makes loading and error states first-class citizens.</li></ul><p>A strong implementation keeps components small, styling consistent, and data fetching predictable. That is the bar this project aims for.</p>"
+  },
+  {
+    "title": "WordPress & GraphQL Integration",
+    "slug": "wordpress-graphql-integration",
+    "excerpt": "How WPGraphQL turns WordPress into a flexible content platform for modern frontend applications.",
+    "image": "wpgraphql.svg",
+    "content": "<p>WordPress remains one of the best editorial interfaces available, especially for teams that need simple publishing workflows. WPGraphQL adds a strong developer experience on top of that by exposing structured queries for posts, media, authors, and more.</p><p>Instead of relying on the REST API, this implementation fetches homepage data and single-post content exclusively through GraphQL queries. That keeps the assignment aligned with the brief and makes the frontend contract explicit.</p><h2>Integration checklist</h2><ul><li>Install and activate WPGraphQL.</li><li>Confirm the GraphQL endpoint is publicly reachable.</li><li>Query the exact fields required by the UI and nothing more.</li></ul><p>The result is a clean separation between content management and frontend rendering while still using one WordPress source of truth.</p>"
+  },
+  {
+    "title": "Tips for Effective Content Creation",
+    "slug": "tips-for-effective-content-creation",
+    "excerpt": "Small editorial habits that make blog content easier to read, easier to maintain, and more useful to visitors.",
+    "image": "content.svg",
+    "content": "<p>Content quality is rarely about writing more. It is usually about writing with clearer structure. Strong headlines, short paragraphs, useful examples, and purposeful excerpts all help a post perform better.</p><p>For this homepage, the cards are intentionally compact. That means every excerpt needs to communicate value quickly. A good excerpt should support scanning, not repeat the title with different wording.</p><h2>Useful habits</h2><ul><li>Write the excerpt after the article is finished.</li><li>Use featured images that reinforce the topic.</li><li>Keep headings descriptive so single-post pages are easy to skim.</li></ul><p>These details improve both the CMS experience and the final frontend presentation.</p>"
+  },
+  {
+    "title": "The Benefits of Headless CMS",
+    "slug": "the-benefits-of-headless-cms",
+    "excerpt": "Why teams choose a headless architecture when they need editorial flexibility and frontend control.",
+    "image": "headless.svg",
+    "content": "<p>A headless CMS architecture separates content management from presentation. Editors continue working in a familiar system like WordPress, while developers gain more freedom to build tailored frontend experiences.</p><p>That tradeoff is especially useful when the design language needs to diverge from a classic WordPress theme. In this assignment, the same posts power two implementations: a WordPress + Elementor page and a Next.js frontend.</p><h2>Advantages</h2><ul><li>Frontend teams can optimize layout, performance, and deployment independently.</li><li>Content teams keep the publishing workflows they already understand.</li><li>Multiple frontends can consume the same structured content.</li></ul><p>Headless does introduce complexity, but for carefully scoped projects it can be a very effective pattern.</p>"
+  },
+  {
+    "title": "Understanding GraphQL Queries",
+    "slug": "understanding-graphql-queries",
+    "excerpt": "A straightforward look at selecting only the fields a UI needs from a GraphQL-powered CMS.",
+    "image": "queries.svg",
+    "content": "<p>GraphQL is most useful when the query matches the interface. Instead of fetching a broad resource and filtering it later, the client describes exactly which fields it needs for rendering.</p><p>That is why the homepage query in this repo only requests titles, slugs, excerpts, dates, featured images, and author details. The single-post query adds full content because that route needs richer editorial data.</p><h2>Good query design</h2><ul><li>Keep homepage queries small and focused.</li><li>Use clear TypeScript shapes around the response.</li><li>Handle missing fields gracefully in the UI.</li></ul><p>That approach improves reliability and keeps the code easier for reviewers to inspect.</p>"
+  },
+  {
+    "title": "SEO Best Practices",
+    "slug": "seo-best-practices",
+    "excerpt": "Core on-page SEO habits that support discoverability without compromising content quality or layout.",
+    "image": "seo.svg",
+    "content": "<p>SEO starts with fundamentals: descriptive titles, readable URLs, meaningful headings, and content that satisfies the visitor intent behind a search. Those basics matter more than quick hacks.</p><p>In this project, the WordPress posts use clean slugs, concise excerpts, structured headings, and featured images with alt text. The Next.js post pages also expose meaningful metadata so the frontend remains search-friendly.</p><h2>What matters most</h2><ul><li>Use human-readable slugs and page titles.</li><li>Write excerpts that summarize the article clearly.</li><li>Make sure images have appropriate alt text.</li></ul><p>Strong SEO usually comes from disciplined implementation, not from adding complexity.</p>"
+  }
+]

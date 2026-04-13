@@ -1,0 +1,12 @@
+{
+  "name": "webstack-wordpress-next-assignment",
+  "private": true,
+  "packageManager": "pnpm@10.27.0",
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "start": "pnpm --filter frontend start",
+    "lint": "pnpm --filter frontend lint",
+    "typecheck": "pnpm --filter frontend typecheck"
+  }
+}

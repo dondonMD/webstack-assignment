@@ -1,0 +1,10 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F5F3FF"/>
+  <circle cx="318" cy="292" r="126" fill="#3B82F6"/>
+  <text x="253" y="316" fill="white" font-size="72" font-family="Arial, sans-serif" font-weight="700">WP</text>
+  <circle cx="864" cy="292" r="126" fill="#111827"/>
+  <text x="752" y="316" fill="white" font-size="56" font-family="Arial, sans-serif" font-weight="700">NEXT</text>
+  <path d="M600 182L633 254L712 254L649 303L674 378L600 332L526 378L551 303L488 254L567 254L600 182Z" fill="#D94693"/>
+  <path d="M346 292H486" stroke="#D94693" stroke-width="18" stroke-linecap="round"/>
+  <path d="M714 292H782" stroke="#D94693" stroke-width="18" stroke-linecap="round"/>
+</svg>

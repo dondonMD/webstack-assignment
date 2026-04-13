@@ -1,0 +1,50 @@
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - wordpress_db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:6.8-php8.3-apache
+    depends_on:
+      - db
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress_app_data:/var/www/html
+      - ./seed/images:/seed-images
+    ports:
+      - "8090:80"
+
+  wpcli:
+    image: wordpress:cli-php8.3
+    depends_on:
+      - wordpress
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress_app_data:/var/www/html
+      - ./seed:/seed
+      - ./scripts:/scripts
+      - ./seed/images:/seed-images
+    working_dir: /var/www/html
+    entrypoint: ["bash", "-lc", "sleep infinity"]
+
+volumes:
+  wordpress_db_data:
+  wordpress_app_data:

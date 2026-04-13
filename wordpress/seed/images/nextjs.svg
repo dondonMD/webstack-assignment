@@ -1,0 +1,8 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#EEF4FF"/>
+  <rect x="74" y="96" width="646" height="390" rx="28" fill="#111827"/>
+  <rect x="114" y="138" width="566" height="306" rx="18" fill="#E5E7EB"/>
+  <text x="220" y="312" fill="#111827" font-size="72" font-family="Arial, sans-serif" font-weight="700">Next.js</text>
+  <rect x="802" y="178" width="264" height="264" rx="132" fill="#111827"/>
+  <path d="M894 255V367H918V301L972 367H1002V255H978V321L924 255H894Z" fill="white"/>
+</svg>
