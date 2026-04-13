@@ -24,6 +24,25 @@ const fallbackAvatar = {
   alt: "Default author avatar.",
 };
 
+function isPublicAssetUrl(value?: string | null) {
+  if (!value) {
+    return false;
+  }
+
+  try {
+    const url = new URL(value);
+    const hostname = url.hostname.toLowerCase();
+
+    if (hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1") {
+      return false;
+    }
+
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function getAuthorName(name?: string | null) {
   if (!name || name === "admin") {
     return "John Doe";
@@ -41,7 +60,9 @@ function mapPost(post: WordPressPost): WordPressPostSummary {
     date: post.date,
     excerptText: stripHtml(post.excerpt),
     featuredImage: {
-      url: post.featuredImage?.node.sourceUrl ?? fallbackFeaturedImage.url,
+      url: isPublicAssetUrl(post.featuredImage?.node.sourceUrl)
+        ? post.featuredImage?.node.sourceUrl ?? fallbackFeaturedImage.url
+        : fallbackFeaturedImage.url,
       alt: post.featuredImage?.node.altText || fallbackFeaturedImage.alt,
     },
     author: {
