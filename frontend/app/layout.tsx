@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "MyBlog | WordPress + Next.js Assignment",
   description:
     "A polished homepage built twice from the same WordPress content source: Elementor and Next.js with WPGraphQL.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
