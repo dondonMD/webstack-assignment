@@ -216,7 +216,7 @@ Then deploy the `frontend` app.
 
 ## Live URLs
 
-- WordPress: `http://127.0.0.1:8090`
+- WordPress: `Local Docker setup documented in this README`
 - Next.js: `https://frontend-omega-lake-71.vercel.app`
 
 ## Suggested Screenshots
